@@ -1,6 +1,15 @@
-new TypeIt("#greeting", {
+const typingGreeting = new TypeIt("#greeting", {
   lifeLike: false,
   speed: 0,
+  afterComplete: async () => {
+    setTimeout(function () {
+      document.querySelector(".greeting").classList.add("move-up");
+    }, 2000);
+    setTimeout(function () {
+      document.querySelector(".container").classList.remove("hidden");
+      document.querySelector(".about-me").classList.remove("hidden");
+    }, 4000);
+  },
 })
   .type("H")
   .pause(161)
@@ -68,3 +77,5 @@ new TypeIt("#greeting", {
   .pause(360)
   .type("?")
   .go();
+
+export { typingGreeting };
