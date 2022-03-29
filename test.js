@@ -241,18 +241,18 @@ class CardCarousel extends DraggingEvent {
     let formula;
 
     if (x <= 0) {
-      formula = 1 - (-1 / 4.5) * x;
+      formula = 1 - (-1 / 5) * x;
 
       return formula;
     } else if (x > 0) {
-      formula = 1 - (1 / 4.5) * x;
+      formula = 1 - (1 / 5) * x;
 
       return formula;
     }
   }
 
   calcScale(x) {
-    const formula = 1 - (1 / 3) * Math.pow(x, 2);
+    const formula = 1 - (1 / 5) * Math.pow(x, 2);
 
     if (formula <= 0) {
       return 0;

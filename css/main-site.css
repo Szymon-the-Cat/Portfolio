@@ -52,6 +52,10 @@ html {
   opacity: 0;
 }
 
+.hidden .card-carousel .card {
+  cursor: default;
+}
+
 .visuallyhidden {
   position: absolute;
   z-index: -1;
@@ -127,6 +131,13 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.card-carousel .card:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .card.highlight {
