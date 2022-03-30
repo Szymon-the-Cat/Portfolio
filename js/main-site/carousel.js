@@ -229,8 +229,17 @@ class CardCarousel extends DraggingEvent {
     if (data.zIndex || data.zIndex == 0) {
       if (data.zIndex == 0) {
         card.classList.add("highlight");
+        const btn = card.querySelector(".card-btn");
+
+        btn.addEventListener("mouseover", function () {
+          card.classList.add("glowing-card");
+        });
+        btn.addEventListener("mouseleave", function () {
+          card.classList.remove("glowing-card");
+        });
       } else {
         card.classList.remove("highlight");
+        card.classList.remove("glowing-card");
       }
 
       card.style.zIndex = data.zIndex;
