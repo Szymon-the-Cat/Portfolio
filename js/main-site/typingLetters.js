@@ -7,7 +7,7 @@ const typingGreeting = new TypeIt("#greeting", {
     }, 2000);
     setTimeout(function () {
       document.querySelector(".container").classList.remove("hidden");
-      document.querySelector(".about-me").classList.remove("hidden");
+      document.querySelector(".about-me-btn").classList.remove("hidden");
     }, 4000);
   },
 })
